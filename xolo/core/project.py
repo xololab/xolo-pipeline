@@ -2,7 +2,8 @@ import typer
 from rich.console import Console
 from rich.table import Table
 from pathlib import Path
-import json
+import yaml
+from .models import ProjectData, FolderStructure
 console = Console()
 app = typer.Typer()
 
@@ -10,23 +11,28 @@ app = typer.Typer()
 @app.command()
 def set_root(path: Path):
     """
-    set root path for projects and create environmet variable PROJECTS
-    :return:
+    Set root path for projects and create environment variable PROJECTS
     """
-    typer.echo(f"path received: {path}")
+    project_root = path
+    config_data = {"PROJECTS": str(project_root)}
+    config_path = Path(__file__).resolve().parent.parent.parent / "config.yaml"
+    with config_path.open("w") as f:
+        yaml.dump(config_data, f, default_flow_style=False)
+    typer.echo(f"Path saved to config.yaml: {project_root}")
+
 
 
 
 @app.command()
-def update_root():
+def update_root(path: Path):
     """
     update root path for projects and create environmet variable PROJECTS
-    :return:
+
     """
     pass
 
 @app.command()
-def create_project():
+def create_project(project_name: str):
     """
     create project, set root path for project and environment variable PROJECT_ROOT
     create project confing.json for data
@@ -41,10 +47,26 @@ def create_project():
     resolution: str "HD, 4K etc"
     fps: int "24, 23 etc"
 
-    :return:
+
     project config.json should be created in PROJECT_ROOT folder
     """
-    pass
+    config_path = Path(__file__).resolve().parent.parent.parent / "config.yaml"
+
+    if config_path.exists():
+        with config_path.open("r") as f:
+            config = yaml.safe_load(f)
+        root_path = Path(config["PROJECTS"])
+        structure = FolderStructure()
+        for _, rel_path in structure.model_dump().items():
+
+            folder_path = root_path / project_name / rel_path.lstrip("/")
+            folder_path.mkdir(parents=True, exist_ok=True)
+            print(f"📁 Created: {folder_path}")
+    else:
+        typer.secho("config file not found", fg=typer.colors.RED)
+
+
+
 
 @app.command()
 def delete_project():
