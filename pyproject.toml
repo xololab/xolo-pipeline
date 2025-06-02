@@ -31,5 +31,5 @@ xolo = "xolo.__main__:app"
 package = true
 
 [tool.pdm.scripts]
-docs:serve = "mkdocs serve"
-docs:build = "mkdocs build"
+docs.serve = "mkdocs serve"
+docs.build = "mkdocs build"

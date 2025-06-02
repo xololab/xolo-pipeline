@@ -3,7 +3,6 @@
 
 ### ⚙️ `mkdocs.yml`
 
-```yaml
 site_name: Xolo Pipeline
 site_description: A lightweight open-source pipeline for solo creators and small studios.
 site_url: https://ronnyascencio.github.io/xolo-pipeline

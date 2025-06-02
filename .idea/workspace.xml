@@ -8,10 +8,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/commands.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/commands.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mkdocs.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mkdocs.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uv.lock" beforeDir="false" afterPath="$PROJECT_DIR$/uv.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xolo/core/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/xolo/core/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xolo_pipeline.egg-info/PKG-INFO" beforeDir="false" afterPath="$PROJECT_DIR$/xolo_pipeline.egg-info/PKG-INFO" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xolo_pipeline.egg-info/SOURCES.txt" beforeDir="false" afterPath="$PROJECT_DIR$/xolo_pipeline.egg-info/SOURCES.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
