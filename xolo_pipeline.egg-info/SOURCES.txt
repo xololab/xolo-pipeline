@@ -1,0 +1,14 @@
+README.md
+pyproject.toml
+tests/test_main_project.py
+xolo/__init__.py
+xolo/__main__.py
+xolo/core/__init__.py
+xolo/core/models.py
+xolo/core/project.py
+xolo_pipeline.egg-info/PKG-INFO
+xolo_pipeline.egg-info/SOURCES.txt
+xolo_pipeline.egg-info/dependency_links.txt
+xolo_pipeline.egg-info/entry_points.txt
+xolo_pipeline.egg-info/requires.txt
+xolo_pipeline.egg-info/top_level.txt
