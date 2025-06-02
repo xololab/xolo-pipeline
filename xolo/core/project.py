@@ -4,6 +4,10 @@ from rich.table import Table
 from pathlib import Path
 import yaml
 from .models import ProjectData, FolderStructure
+from rich.progress import track
+
+
+
 console = Console()
 app = typer.Typer()
 
@@ -57,11 +61,12 @@ def create_project(project_name: str):
             config = yaml.safe_load(f)
         root_path = Path(config["PROJECTS"])
         structure = FolderStructure()
-        for _, rel_path in structure.model_dump().items():
+        for _, rel_path in track(structure.model_dump().items(), description="Creating project"):
 
             folder_path = root_path / project_name / rel_path.lstrip("/")
             folder_path.mkdir(parents=True, exist_ok=True)
             print(f"📁 Created: {folder_path}")
+
     else:
         typer.secho("config file not found", fg=typer.colors.RED)
 
