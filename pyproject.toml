@@ -13,6 +13,9 @@ dependencies = [
 
 [dependency-groups]
 dev = [
+    "mkdocs>=1.6.1",
+    "mkdocs-material>=9.6.14",
+    "mkdocstrings[python]>=0.29.1",
     "pytest>=8.3.5",
     "ruff>=0.11.12",
 ]
@@ -26,3 +29,7 @@ xolo = "xolo.__main__:app"
 
 [tool.uv]
 package = true
+
+[tool.pdm.scripts]
+docs:serve = "mkdocs serve"
+docs:build = "mkdocs build"
