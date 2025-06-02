@@ -1,0 +1,34 @@
+
+---
+
+### ⚙️ `mkdocs.yml`
+
+```yaml
+site_name: Xolo Pipeline
+site_description: A lightweight open-source pipeline for solo creators and small studios.
+site_url: https://ronnyascencio.github.io/xolo-pipeline
+repo_url: https://github.com/ronnyascencio/xolo-pipeline
+repo_name: ronnyascencio/xolo-pipeline
+
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.top
+    - content.code.copy
+    - content.code.annotate
+  palette:
+    scheme: slate
+
+nav:
+  - Home: index.md
+  - Getting Started: getting-started.md
+
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          setup_commands:
+            - import sys
+            - sys.path.append("src")
