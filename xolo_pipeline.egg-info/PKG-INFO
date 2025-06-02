@@ -4,10 +4,12 @@ Version: 0.0.1
 Summary: Add your description here
 Requires-Python: >=3.11
 Description-Content-Type: text/markdown
+License-File: LICENSE
 Requires-Dist: pydantic>=2.11.5
 Requires-Dist: pyyaml>=6.0.2
 Requires-Dist: rich>=14.0.0
 Requires-Dist: typer>=0.16.0
+Dynamic: license-file
 
 # 🐍 Xolo Pipeline
 
