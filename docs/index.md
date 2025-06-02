@@ -1,14 +1,25 @@
 # 🐍 Xolo Pipeline
 
-Welcome to the official documentation for **Xolo Pipeline** — a modular, cross-platform open source pipeline for freelancers, solo artists and small studios.
+**Xolo Pipeline** is a lightweight, modular, and cross-platform pipeline framework built in Python and powered by [`uv`](https://github.com/astral-sh/uv). It’s tailored for freelancers, solo artists, and small studios working in VFX, animation, and digital content creation.
 
-## ✨ What is Xolo?
+## ✨ Key Features
 
-Xolo is a lightweight framework that simplifies pipeline setup and automation for digital content creators. Inspired by Prism and TikManager, it's built entirely in Python using [`uv`](https://github.com/astral-sh/uv) and [`typer`](https://typer.tiangolo.com/).
+- ✅ Cross-platform (Linux, Windows, macOS)
+- 🔌 Modular CLI with [Typer](https://typer.tiangolo.com/)
+- ☁️ Works with local disks, cloud-sync folders (Dropbox, Drive), or NAS
+- 🧪 Requires no global Python — just `uv`
 
-## 📦 Key Features
+## 📚 Documentation Sections
 
-- Modular CLI
-- Local/Cloud storage support
-- Easy install with `uv`
-- Designed for artists & devs
+- [Getting Started](getting-started.md)
+- CLI Commands (coming soon)
+- DCC Integrations (Maya, Blender, Nuke) — in progress
+- Contributing Guide (planned)
+
+## 📦 Status
+
+- Alpha `v0.0.1`  
+- Open source under MIT License  
+- Actively in development — [see GitHub Project](https://github.com/ronnyascencio/xolo-pipeline/projects)
+
+---
