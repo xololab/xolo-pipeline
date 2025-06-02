@@ -11,19 +11,22 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Repository
+      - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Set up Python
+      - name: Setup Python
         uses: actions/setup-python@v4
         with:
-          python-version: 3.11
+          python-version: '3.x'
 
       - name: Install dependencies
         run: |
           pip install mkdocs mkdocs-material mkdocstrings[python]
 
-      - name: Build and Deploy Docs
+      - name: Build the site
+        run: mkdocs build
+
+      - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
