@@ -1,7 +1,10 @@
-<p style="text-align:center">
-  <img src="docs/assets/logo.png" alt="Xolo Logo" width="180"><br>
+<p align="center">
+  <img src="docs/assets/logo.png" alt="Xolo Logo" width="200"/>
+</p>
+
+<p align="center">
   <strong>Xolo Pipeline</strong><br>
-  Framework modular para pipelines creativos.
+
 </p>
 
 
