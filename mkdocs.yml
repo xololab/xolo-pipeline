@@ -12,13 +12,26 @@ repo_name: ronnyascencio/xolo-pipeline
 
 theme:
   name: material
+  logo: assets/logo.png
+  favicon: assets/favicon.ico
   features:
     - navigation.tabs
     - navigation.top
     - content.code.copy
     - content.code.annotate
   palette:
-    scheme: slate
+    - scheme: default
+      primary: black
+      accent: indigo
+  icon:
+    repo: fontawesome/brands/github
+
+  extra:
+    social:
+#      - icon: fontawesome/brands/twitter
+#        link: https://twitter.com/tu_usuario
+      - icon: fontawesome/brands/linkedin
+        link: https://linkedin.com/in/ronnyascencio
 
 nav:
   - Home: index.md
