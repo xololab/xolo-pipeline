@@ -12,28 +12,7 @@ console = Console()
 app = typer.Typer()
 
 
-@app.command()
-def set_root(path: Path):
-    """
-    Set root path for projects and create environment variable PROJECTS
-    """
-    project_root = path
-    config_data = {"PROJECTS": str(project_root)}
-    config_path = Path(__file__).resolve().parent.parent.parent / "config.yaml"
-    with config_path.open("w") as f:
-        yaml.dump(config_data, f, default_flow_style=False)
-    typer.echo(f"Path saved to config.yaml: {project_root}")
 
-
-
-
-@app.command()
-def update_root(path: Path):
-    """
-    update root path for projects and create environmet variable PROJECTS
-
-    """
-    pass
 
 @app.command()
 def create_project(project_name: str):

@@ -4,8 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0361d9a3-f6ff-4ca7-b2de-f2efeff35d22" name="Changes" comment=".github settup and project load bar added">
+    <list default="true" id="0361d9a3-f6ff-4ca7-b2de-f2efeff35d22" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/xolo/core/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_main_project.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_main_project.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xolo/__main__.py" beforeDir="false" afterPath="$PROJECT_DIR$/xolo/__main__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xolo/core/project.py" beforeDir="false" afterPath="$PROJECT_DIR$/xolo/core/project.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +57,9 @@
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/ronnyascencio/Projects/pipeline/xolo-pipeline&quot;
+    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/ronnyascencio/Projects/pipeline/xolo-pipeline&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
   <component name="SharedIndexes">
@@ -70,5 +78,26 @@
       <updated>1748879377385</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/xolo/__main__.py</url>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
