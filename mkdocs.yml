@@ -8,7 +8,7 @@ site_description: A lightweight open-source pipeline for solo creators and small
 site_url: https://xolo.ronnyascencio.com
 use_directory_urls: false
 repo_url: https://github.com/ronnyascencio/xolo-pipeline
-repo_name: ronnyascencio/xolo-pipeline
+repo_name: xolo-pipeline
 
 theme:
   name: material
@@ -20,9 +20,25 @@ theme:
     - content.code.copy
     - content.code.annotate
   palette:
-    - scheme: default
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/lightbulb-auto
+        name: Switch to light mode
+    - media: '(prefers-color-scheme: light)'
+      scheme: default
       primary: black
-      accent: indigo
+      accent: teal
+      toggle:
+        icon: material/lightbulb
+        name: Switch to dark mode
+    - media: '(prefers-color-scheme: dark)'
+      scheme: slate
+      primary: black
+      accent: teal
+      toggle:
+        icon: material/lightbulb-outline
+        name: Switch to system preference
+  language: en
   icon:
     repo: fontawesome/brands/github
 
@@ -47,3 +63,17 @@ plugins:
         python: {}
 
 
+extra:
+  social:
+    - icon: fontawesome/brands/github-alt
+      link: https://github.com/ronnyascencio/xolo-pipeline
+#    - icon: fontawesome/brands/twitter
+#      link: https://twitter.com/ronny_ascencio
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/ronnyascencio
+    - icon: fontawesome/brands/dev
+      link: https://dev.to/ronnyascencio
+    - icon: fontawesome/brands/medium
+      link: https://medium.com/@ronnyascencio
+    - icon: fontawesome/solid/globe
+      link: https://ronnyascencio.com
