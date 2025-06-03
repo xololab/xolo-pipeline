@@ -5,7 +5,7 @@
 
 site_name: Xolo Pipeline
 site_description: A lightweight open-source pipeline for solo creators and small studios.
-site_url: https://ronnyascencio.github.io/xolo-pipeline/
+site_url: https://xolo.ronnyascencio.com
 use_directory_urls: false
 repo_url: https://github.com/ronnyascencio/xolo-pipeline
 repo_name: ronnyascencio/xolo-pipeline
