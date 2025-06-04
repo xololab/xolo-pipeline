@@ -5,13 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0361d9a3-f6ff-4ca7-b2de-f2efeff35d22" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/docs/installation.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/utils.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xolo/utils/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/xolo/utils/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mkdocs.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mkdocs.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/xolo/core/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/xolo/core/config.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,6 +62,9 @@
       <recent name="$PROJECT_DIR$/docs/assets" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/docs/utils" />
+      <recent name="$PROJECT_DIR$/docs/tutorial" />
+      <recent name="$PROJECT_DIR$/docs/getting-started" />
       <recent name="$PROJECT_DIR$/xolo/utils" />
     </key>
   </component>

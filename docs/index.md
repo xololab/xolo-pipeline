@@ -1,4 +1,4 @@
-# 🐍 Xolo Pipeline
+# Xolo Pipeline
 
 **Xolo Pipeline** is a lightweight, modular, and cross-platform pipeline framework built in Python and powered by [`uv`](https://github.com/astral-sh/uv). It’s tailored for freelancers, solo artists, and small studios working in VFX, animation, and digital content creation.
 
