@@ -51,8 +51,12 @@ theme:
 
 nav:
   - Home: index.md
-  - Getting Started: getting-started.md
+  - Getting Started:
+      - tutorial/installation.md
+      - tutorial/commands.md
   - Commands: commands.md
+  - API:
+      - utils/load_config.md
 
 
 
