@@ -54,7 +54,6 @@ nav:
   - Getting Started:
       - tutorial/installation.md
       - tutorial/commands.md
-  - Commands: commands.md
   - API:
       - utils/load_config.md
 
