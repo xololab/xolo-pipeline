@@ -30,6 +30,10 @@ def set_roots(projects: Path, assets: Path):
         assets_path = Path(config["GLOBAL_ASSETS"])
         os.environ["PROJECTS"] = str(projects_path)
         os.environ["GLOBAL_ASSETS"] = str(assets_path)
+        projects_env = os.getenv("PROJECTS")
+        global_assets_env = os.getenv("GLOBAL_ASSETS")
+        print(f"PROJECTS env: {projects_env}")
+        print(f"Global Assets env: {global_assets_env}")
     else:
         typer.echo("Environment variable PROJECTS and GLOBAL_ASSETS not set", fg=typer.colors.RED)
 
