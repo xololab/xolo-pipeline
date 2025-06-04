@@ -1,4 +1,4 @@
-# xolo/core/utils.py
+# xolo/utils/settings.py
 import yaml
 from pathlib import Path
 
