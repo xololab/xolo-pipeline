@@ -7,11 +7,14 @@ requires-python = ">=3.11"
 dependencies = [
     "fastapi>=0.115.12",
     "ffmpeg-python>=0.2.0",
+    "httpx>=0.28.1",
+    "jinja2>=3.1.6",
     "opentimelineio>=0.17.0",
     "pyblish-base>=1.8.12",
     "pydantic>=2.11.5",
     "pyyaml>=6.0.2",
     "rich>=14.0.0",
+    "sqlmodel>=0.0.24",
     "typer>=0.16.0",
     "uvicorn>=0.34.3",
 ]
