@@ -6,7 +6,7 @@
       <excludeFolder url="file://$MODULE_DIR$/xolo-pipeline" />
       <excludeFolder url="file://$MODULE_DIR$/xolo_pipeline.egg-info" />
     </content>
-    <orderEntry type="jdk" jdkName="uv (xolo-pipeline) (3)" jdkType="Python SDK" />
+    <orderEntry type="jdk" jdkName="uv (xolo-pipeline)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
 </module>

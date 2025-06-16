@@ -1,14 +1,19 @@
 [project]
 name = "xolo-pipeline"
 version = "0.0.1"
-description = "Add your description here"
+description = "XOLO Pipeline: A lightweight pipeline framework for animation, VFX and commercials."
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
+    "fastapi>=0.115.12",
+    "ffmpeg-python>=0.2.0",
+    "opentimelineio>=0.17.0",
+    "pyblish-base>=1.8.12",
     "pydantic>=2.11.5",
     "pyyaml>=6.0.2",
     "rich>=14.0.0",
     "typer>=0.16.0",
+    "uvicorn>=0.34.3",
 ]
 
 [dependency-groups]
@@ -24,8 +29,7 @@ dev = [
 
 
 [project.scripts]
-xolo = "xolo.__main__:app"
-
+xolo = "cli.main:app"
 
 [tool.uv]
 package = true
@@ -33,3 +37,11 @@ package = true
 [tool.pdm.scripts]
 docs.serve = "mkdocs serve"
 docs.build = "mkdocs build"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["cli*", "core*", "dcc*", "backend*"]
+exclude = ["frontend*"]
