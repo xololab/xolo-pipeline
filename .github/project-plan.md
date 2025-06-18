@@ -1,4 +1,4 @@
-# Project Plan for XOLO Pipeline
+# 🛠️ Project Plan for XOLO Pipeline
 
 This document defines the complete roadmap, task breakdown, and progress tracking structure for the development of the **XOLO Pipeline**, a lightweight, modular, and user-friendly pipeline for animation, VFX, and commercials. It is designed to support individual artists and small studios, with scalability toward networked or cloud workflows.
 
@@ -6,167 +6,170 @@ This document defines the complete roadmap, task breakdown, and progress trackin
 
 ## 🔄 Columns
 
-| Backlog | To Do | In Progress | Review | Done |
-|--------|-------|-------------|--------|------|
-| Ideas and future tasks not yet prioritized | Tasks ready to be picked up | Tasks actively being worked on | Tasks waiting to be validated or tested | Completed tasks |
+| Column        | Description                                      |
+|---------------|--------------------------------------------------|
+| **Backlog**   | Ideas and future tasks not yet prioritized       |
+| **To Do**     | Tasks ready to be picked up                      |
+| **In Progress** | Tasks actively being worked on                |
+| **Review**    | Tasks waiting to be validated or tested          |
+| **Done**      | Completed tasks                                  |
 
 ---
 
 ## 🗃️ Backlog
 
-### Issue: Create plugin base structure for Maya  
-**Description:**  
-Prepare base directory and module layout to integrate a Maya-specific plugin inside the `dcc/` folder. Include entry point and basic UI placeholder.
+### Create plugin base structure for Maya
+**Labels:** `dcc`  
+Prepare base directory and module layout to integrate a Maya-specific plugin inside the `dcc/` folder. Include entry point, basic UI placeholder (using PyQt/PySide), and example environment setup.
 
-### Issue: Create plugin base structure for Houdini  
-**Description:**  
-Set up a directory and module for Houdini integration. Include sample launch file and UI placeholder.
+### Create plugin base structure for Houdini
+**Labels:** `dcc`  
+Set up a directory and module for Houdini integration. Include sample launch file, UI placeholder, and environment hooks.
 
-### Issue: Create plugin base structure for Nuke  
-**Description:**  
-Prepare directory structure for Nuke integration with a simple panel UI and publishing hook.
+### Research Katana vs Gaffer integration
+**Labels:** `dcc`, `enhancement`  
+Evaluate pros and cons of integrating Katana vs Gaffer. Assess compatibility with OCIO and 3Delight, focusing on ease of setup and cost for small studios.
 
-### Issue: Create plugin base structure for Gaffer  
-**Description:**  
-Implement starter plugin code for Gaffer with metadata ingestion and environment hooks. Include OCIO and 3Delight support.
+### Authentication system for production tracker
+**Labels:** `backend`, `enhancement`, `security`  
+Define and implement JWT-based login mechanism to access the web UI. Requires backend user management and frontend login/registration flow.
 
-### Issue: Research Katana vs Gaffer integration  
-**Description:**  
-Evaluate pros and cons of integrating Katana vs Gaffer. Assess compatibility with OCIO and 3Delight.
+### Server deployment strategy (local vs cloud)
+**Labels:** `backend`, `deployment`  
+Define hosting strategy and requirements for local and cloud deployment.
 
-### Issue: Authentication system for production tracker  
-**Description:**  
-Define and implement JWT-based login mechanism to access the web UI of the production tracker.
+### Implement publishing MP4 previews via ffmpeg
+**Labels:** `backend`, `frontend`, `media`  
+Convert EXR or stills to MP4 for web UI preview using `ffmpeg`. Trigger post-publish in backend.
 
-### Issue: Server deployment strategy (local vs cloud)  
-**Description:**  
-Define hosting strategy and requirements for running the backend locally or on studio servers.
+### Add thumbnail generation script
+**Labels:** `backend`, `frontend`, `media`, `enhancement`  
+Generate thumbnails from MP4 or frames using `ffmpeg` for quick visual reference.
 
-### Issue: Implement publishing MP4 previews via ffmpeg  
-**Description:**  
-Convert image sequences or stills to low-resolution MP4s during publishing for preview on the web UI. Integrate `ffmpeg-python`.
+### Implement async task queue for publishing
+**Labels:** `backend`, `enhancement`  
+Use asyncio or Celery to queue publishing tasks and avoid blocking API threads.
 
-### Issue: Add thumbnail generation script  
-**Description:**  
-Create utility function to extract a thumbnail from MP4 using `ffmpeg` and store it next to the publish.
+### Implement Pyblish for all DCC publishes
+**Labels:** `dcc`  
+Develop Pyblish collectors, validators, and extractors for all supported DCCs.
 
-### Issue: Full ingest tool integration with Nuke Studio / Hero  
-**Description:**  
-Enable ingesting sequence and shot structure directly from Nuke Studio or Hero timeline. Convert to EXR, auto-create folders, and update metadata.
+### Evaluate Perforce integration
+**Labels:** `enhancement`, `version_control`  
+Assess Perforce integration for asset versioning and team collaboration.
 
-### Issue: Create internal documentation website with MkDocs  
-**Description:**  
-Generate developer and user documentation from docstrings and Markdown using MkDocs with Material theme.
+### Asset Type Definition and Management
+**Labels:** `core`, `backend`, `enhancement`  
+Define `core/asset_types.yaml` with default folder structures and naming for each asset type.
 
-### Issue: Implement async task queue for publishing  
-**Description:**  
-Queue publishing jobs and run in background using `asyncio` or `Celery` for scalability.
+### Pipeline Configuration Schema Validation
+**Labels:** `core`, `cli`, `backend`, `enhancement`  
+Use Pydantic to validate YAML files like `global_settings.yaml` and `project_type.yaml`.
 
-### Issue: Implement Pyblish for all DCC publishes  
-**Description:**  
-Use Pyblish to manage validation and publishing workflow across DCCs like Nuke, Maya, Houdini, and Gaffer.
+### Implement Health Check Endpoint for Backend
+**Labels:** `backend`, `monitoring`  
+Add `/health` FastAPI route to validate backend and DB status.
 
-### Issue: Evaluate Perforce integration  
-**Description:**  
-Research integration with Perforce for asset version control and team collaboration.
+### Add Basic CLI Testing Framework (Pytest)
+**Labels:** `cli`, `testing`  
+Setup unit/integration tests for CLI commands.
+
+### Add Basic Backend API Testing Framework (Pytest)
+**Labels:** `backend`, `testing`  
+Setup testing framework using `httpx` or `TestClient`.
+
+### Implement Basic Cache Management for DCCs (Optional)
+**Labels:** `dcc`, `enhancement`, `performance`  
+Add caching for frequently used data in DCC plugins.
 
 ---
 
 ## ✅ To Do
 
-### Issue: Implement `xolo init` command  
-**Description:**  
-Create CLI command to initialize a new project. Prompt user for project name, root path, and global asset directory.
+### Core Data Model Definition (Pydantic/DB Schema)
+**Labels:** `backend`, `core`, `priority: high`  
+Design Pydantic models and DB schema for Project, Task, Asset, Version, and User.
 
-### Issue: Configure global settings YAML  
-**Description:**  
-Store default paths, OCIO configuration, project type, resolution, and metadata in a central YAML file editable via CLI.
+### Basic User Authentication in Backend
+**Labels:** `backend`, `security`, `priority: high`  
+Add simple API key/session-based auth for dev phase.
 
-### Issue: Implement `xolo launch` command  
-**Description:**  
-Allow users to launch DCCs (e.g., Nuke, Maya, Houdini) from the CLI with correct environment variables.
+### Implement `xolo init` command
+**Labels:** `cli`, `priority: high`  
+Create project structure from YAML template and register with backend.
 
-### Issue: Define backend API structure with FastAPI  
-**Description:**  
-Design and scaffold backend routes: `/projects`, `/shots`, `/assets`, `/tasks`, `/users`, `/publishes`.
+### Configure global settings YAML
+**Labels:** `cli`, `core`  
+Store OCIO paths, executable paths, and pipeline defaults in YAML config.
 
-### Issue: Create web UI skeleton with Astro  
-**Description:**  
-Build basic layout in `frontend/` using Astro (without React). Include: Dashboard, Shots, Versions, Settings.
+### Implement `xolo launch` command
+**Labels:** `cli`, `dcc`, `priority: high`  
+Launch DCCs with environment setup using CLI and backend config.
 
-### Issue: CLI option to create shots manually  
-**Description:**  
-Add support in CLI to manually create sequences and shots, auto-creating folder structures and metadata YAMLs.
+### Define backend API structure with FastAPI
+**Labels:** `backend`, `priority: high`  
+Create routes for `/projects`, `/tasks`, `/assets`, `/versions`, `/users`, `/config`.
 
-### Issue: Add CLI option to choose Nuke Studio or manual ingest  
-**Description:**  
-Let user decide whether to ingest timeline automatically or create manually when running `xolo ingest`.
+### Create web UI skeleton with Astro
+**Labels:** `frontend`  
+Design basic Astro layout with dashboard, projects, shots, tasks, and settings.
 
-### Issue: Implement API endpoint to receive publishes  
-**Description:**  
-Create FastAPI route to receive publish metadata and store it in a file-based or future DB system.
+### Implement `xolo settings` CLI command
+**Labels:** `cli`  
+View and edit global/project settings via CLI.
 
-### Issue: Display publishes and thumbnails in frontend  
-**Description:**  
-Render published versions with embedded thumbnails or MP4 preview videos.
+### Add OCIO config auto-load
+**Labels:** `cli`, `core`, `priority: high`  
+Automatically set OCIO env var when launching DCCs or creating projects.
 
-### Issue: Assign task status (In Progress, Done, Approved)  
-**Description:**  
-Enable frontend and backend sync of task/shot status updates with visual indicators.
+### Create `project_type.yaml` templates
+**Labels:** `core`  
+Template default folders, resolutions, metadata for each project type.
 
-### Issue: Implement `xolo settings` CLI command  
-**Description:**  
-Allow user to view or modify global or per-project settings via CLI using `Typer`.
+### Versioned file and folder naming system
+**Labels:** `core`, `priority: high`  
+Design consistent naming system like `asset_v001`, `shot_v003`.
 
-### Issue: Add OCIO config auto-load  
-**Description:**  
-Auto-load and inject OCIO environment variables when launching a DCC or creating a project.
+### Ingest tool with Nuke Studio / Hero (Phase 1: OTIO Parsing)
+**Labels:** `dcc`, `enhancement`, `priority: high`  
+Parse OTIO to extract sequence/shot info for ingesting.
 
-### Issue: Create `project_type.yaml` templates  
-**Description:**  
-Define YAML templates for each project type (animation, VFX, commercial, short). Each template includes default folders, resolution, and metadata.
+### Implement API endpoint to receive publishes
+**Labels:** `backend`, `priority: high`  
+Add `POST /publishes` to register versions and metadata from DCCs.
 
-### Issue: Versioned file and folder naming system  
-**Description:**  
-Standardize `v001`/`v002` naming in both folders and files. Ensure version match between metadata, file, and folder.
+### Create plugin base structure for Nuke
+**Labels:** `dcc`  
+Directory for Nuke panel UI and publishing hook.
 
-### Issue: Use `rich` for CLI formatting  
-**Description:**  
-Improve terminal output using `rich` for colors, tables, syntax highlighting, and progress bars.
+### Base DCC Python Library
+**Labels:** `dcc`, `core`, `priority: high`  
+Create `core/dcc_utils.py` with shared DCC helper functions.
 
 ---
 
-## 🚧 In Progress
+## 🔧 In Progress
 
-### Issue: Set up monorepo structure  
-**Description:**  
-Implement the proposed monorepo layout with `cli/`, `core/`, `dcc/`, `backend/`, and `frontend/`.
+### Set up monorepo structure
+**Labels:** `core`, `cli`, `backend`, `frontend`, `dcc`  
+Organize codebase into `cli/`, `backend/`, `frontend/`, `dcc/`, `core/`.
 
-### Issue: Define `pyproject.toml` and sync with `uv`  
-**Description:**  
-Configure project metadata, dependencies, dev tools, and entry points. Ensure `uv` sync works across submodules.
+### Define `pyproject.toml` and sync with `uv`
+**Labels:** `core`, `cli`  
+Setup dependencies, dev tools, and CLI entry point in `pyproject.toml`.
 
 ---
 
 ## ✅ Done
 
-### Issue: Create GitHub organization `xololab`  
-**Description:**  
-Set up GitHub org to host the XOLO pipeline and future plugins/tools.
+### Create GitHub organization `xololab`
+**Labels:** `documentation`  
+Set up GitHub org to host XOLO pipeline and future tools/plugins.
 
-### Issue: Move existing repository and restructure layout  
-**Description:**  
-Reorganize repo into modular structure for CLI, DCCs, frontend, and backend.
-
----
-
-## 📝 Next Steps
-
-- Set up GitHub Project board using this document as reference.
-- Convert each item into GitHub Issues and link them to the appropriate column.
-- Create `CONTRIBUTING.md`, `LICENSE`, and `README.md` for contributors.
-- Begin development with core CLI commands and project scaffolding.
+### Move existing repository and restructure layout
+**Labels:** `core`, `cli`, `backend`, `frontend`, `dcc`  
+Restructure into monorepo with proper modular layout.
 
 ---
 
-*Maintained by [@ronnyascencio](https://github.com/ronnyascencio) at [XOLO Lab](https://github.com/xololab)*
+**Maintained by [@ronnyascencio](https://github.com/ronnyascencio) at XOLO Lab**
