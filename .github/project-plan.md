@@ -14,9 +14,6 @@ This document defines the complete roadmap, task breakdown, and progress trackin
 | **Review**    | Tasks waiting to be validated or tested          |
 | **Done**      | Completed tasks                                  |
 
----
-
-## 🗃️ Backlog
 
 ### Create plugin base structure for Maya
 **Labels:** `dcc`  
@@ -82,9 +79,7 @@ Setup testing framework using `httpx` or `TestClient`.
 **Labels:** `dcc`, `enhancement`, `performance`  
 Add caching for frequently used data in DCC plugins.
 
----
 
-## ✅ To Do
 
 ### Core Data Model Definition (Pydantic/DB Schema)
 **Labels:** `backend`, `core`, `priority: high`  
@@ -146,9 +141,7 @@ Directory for Nuke panel UI and publishing hook.
 **Labels:** `dcc`, `core`, `priority: high`  
 Create `core/dcc_utils.py` with shared DCC helper functions.
 
----
 
-## 🔧 In Progress
 
 ### Set up monorepo structure
 **Labels:** `core`, `cli`, `backend`, `frontend`, `dcc`  
@@ -158,9 +151,9 @@ Organize codebase into `cli/`, `backend/`, `frontend/`, `dcc/`, `core/`.
 **Labels:** `core`, `cli`  
 Setup dependencies, dev tools, and CLI entry point in `pyproject.toml`.
 
----
 
-## ✅ Done
+
+
 
 ### Create GitHub organization `xololab`
 **Labels:** `documentation`  
@@ -170,6 +163,6 @@ Set up GitHub org to host XOLO pipeline and future tools/plugins.
 **Labels:** `core`, `cli`, `backend`, `frontend`, `dcc`  
 Restructure into monorepo with proper modular layout.
 
----
+
 
 **Maintained by [@ronnyascencio](https://github.com/ronnyascencio) at XOLO Lab**
