@@ -7,7 +7,10 @@ from core import utils
 console = Console()
 app = typer.Typer()
 
+"""
+folder structure creation based on project type VFX, ANIMATION, SHOT
 
+"""
 @app.command()
 def create(project_name: str = typer.Option(..., prompt=True, confirmation_prompt=True),
            project_type: str = typer.Option(..., prompt=True, confirmation_prompt=True)):
