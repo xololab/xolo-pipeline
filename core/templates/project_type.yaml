@@ -1,0 +1,51 @@
+vfx:
+  resolution: [2048, 858]
+  fps: 24
+  ocio_config: core/ocio/ACES-1.3/config.ocio
+  default_folders:
+    - assets
+    - sequences
+    - renders
+    - outputs
+    - plates
+    - scripts
+    - reference
+    - logs
+
+animation:
+  resolution: [1920, 1080]
+  fps: 24
+  ocio_config: core/ocio/ACES-1.3/config.ocio
+  default_folders:
+    - assets
+    - shots
+    - renders
+    - animations
+    - storyboards
+    - outputs
+    - reference
+    - logs
+
+commercial:
+  resolution: [1920, 1080]
+  fps: 29.97
+  ocio_config: core/ocio/ACES-1.3/config.ocio
+  default_folders:
+    - assets
+    - sequences
+    - renders
+    - outputs
+    - review
+    - scripts
+    - logs
+
+shot:
+  resolution: [1920, 1080]
+  fps: 24
+  ocio_config: core/ocio/ACES-1.3/config.ocio
+  default_folders:
+    - renders
+    - outputs
+    - nuke
+    - review
+    - notes
