@@ -46,7 +46,7 @@ def projects_directory(projects: Path = typer.Option(..., prompt=True, confirmat
         global_assets_env = os.getenv("GLOBAL_ASSETS")
         console.log(f'PROJECTS env: {projects_env}', style="blue")
         console.log(f"Global_ASSETS env: {global_assets_env}", style="blue")
-        console.print(f'current USERNAME used : {user}', style="red")
+        console.print(f'current USERNAME: {user}', style="red")
     else:
         console.print("Environment variable PROJECTS and GLOBAL_ASSETS not set", style="red")
 
