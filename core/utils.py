@@ -42,3 +42,19 @@ def project_types(project_type: str) -> list:
         raise typer.Exit(1)
 
     return types[project_type].get("default_folders", [])
+
+
+
+def get_project_type_info(project_type: str) -> dict:
+    if not PROJECT_STRUCTURE.exists():
+        console.print("[red]ERROR: project_type.yaml not found.[/red]")
+        raise typer.Exit(1)
+
+    with open(PROJECT_STRUCTURE, "r") as f:
+        types = yaml.safe_load(f)
+
+    if project_type not in types:
+        console.print(f"[red]ERROR: Project type '{project_type}' not found in project_type.yaml[/red]")
+        raise typer.Exit(1)
+
+    return types[project_type]

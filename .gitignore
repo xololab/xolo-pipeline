@@ -13,3 +13,4 @@ wheels/
 #config files
 config.yaml
 */config.yaml
+*/context.yaml
