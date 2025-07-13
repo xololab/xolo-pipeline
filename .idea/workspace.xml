@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0361d9a3-f6ff-4ca7-b2de-f2efeff35d22" name="Changes" comment="" />
+    <list default="true" id="0361d9a3-f6ff-4ca7-b2de-f2efeff35d22" name="Changes" comment="getting project ty info added for context.yaml creation in show create">
+      <change afterPath="$PROJECT_DIR$/cli/commands/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cli/commands/launch.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cli/commands/shot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/__init__.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -48,29 +54,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/dev/xolo-pipeline&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "dev",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "D:/dev/xolo-pipeline",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "tasks.timeTracking",
+    "start.from.branch": "dev",
+    "tasks.open.task.update.state.enabled": "false",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/docs/assets" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\dev\xolo-pipeline\cli\core" />
       <recent name="$PROJECT_DIR$/docs/utils" />
       <recent name="$PROJECT_DIR$/docs/tutorial" />
       <recent name="$PROJECT_DIR$/docs/getting-started" />
@@ -80,8 +89,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-b26f3e71634d-JavaScript-PY-251.26094.141" />
-        <option value="bundled-python-sdk-9f8e2b94138c-36ea0e71a18c-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-251.26094.141" />
+        <option value="bundled-js-predefined-d6986cc7102b-09060db00ec0-JavaScript-PY-251.26927.90" />
+        <option value="bundled-python-sdk-41e8cd69c857-64d779b69b7a-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-251.26927.90" />
       </set>
     </attachedChunks>
   </component>
@@ -99,9 +108,106 @@
       <workItem from="1750113786812" duration="3029000" />
       <workItem from="1750206746453" duration="2526000" />
       <workItem from="1750243256856" duration="2603000" />
-      <workItem from="1750466953110" duration="2643000" />
+      <workItem from="1750466953110" duration="3574000" />
+      <workItem from="1750630882718" duration="5591000" />
+      <workItem from="1750784336301" duration="2052000" />
+      <workItem from="1752138612453" duration="5051000" />
+      <workItem from="1752228585851" duration="10925000" />
+      <workItem from="1752318239685" duration="9098000" />
+      <workItem from="1752406577769" duration="231000" />
+      <workItem from="1752406980907" duration="3145000" />
+      <workItem from="1752418475034" duration="2362000" />
     </task>
-    <servers />
+    <task id="LOCAL-00001" summary="Ref #36 Create project folders based on project_type.yaml">
+      <option name="closed" value="true" />
+      <created>1752237708957</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1752237708957</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Ref #15 Create project structure from YAML template&#10;(register with backend pending to develop)">
+      <option name="closed" value="true" />
+      <created>1752238066438</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1752238066438</updated>
+    </task>
+    <task id="LOCAL-00003" summary="config and project_type yaml files loaders and variables assign functions">
+      <option name="closed" value="true" />
+      <created>1752238117087</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1752238117087</updated>
+    </task>
+    <task id="LOCAL-00004" summary="settings validation on set the config.yaml file">
+      <option name="closed" value="true" />
+      <created>1752238159678</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1752238159678</updated>
+    </task>
+    <task id="LOCAL-00005" summary="show command added to cli">
+      <option name="closed" value="true" />
+      <created>1752238185136</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1752238185136</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Ref #57&#10;Create project structure from YAML template and (register with backend pending develop)">
+      <option name="closed" value="true" />
+      <created>1752239779958</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1752239779958</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Ref #34 View and edit global/project settings via CLI.">
+      <option name="closed" value="true" />
+      <created>1752240049402</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1752240049402</updated>
+    </task>
+    <task id="LOCAL-00008" summary="ignore updated">
+      <option name="closed" value="true" />
+      <created>1752268660146</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1752268660146</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Ref #16 Project context in YAML config. on show create">
+      <option name="closed" value="true" />
+      <created>1752338881651</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1752338881651</updated>
+    </task>
+    <task id="LOCAL-00010" summary="getting project ty info added for context.yaml creation in show create">
+      <option name="closed" value="true" />
+      <created>1752338920165</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1752338920175</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
+    <option name="shelveChanges" value="true" />
+    <option name="searchClosedTasks" value="true" />
+    <servers>
+      <GitHub url="https://github.com">
+        <option name="repoAuthor" value="xololab" />
+        <option name="repoName" value="xolo-pipeline" />
+        <option name="shouldFormatCommitMessage" value="true" />
+      </GitHub>
+    </servers>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
@@ -116,6 +222,19 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Ref #36 Create project folders based on project_type.yaml" />
+    <MESSAGE value="Ref #15 Create project structure from YAML template&#10;(register with backend pending to develop)" />
+    <MESSAGE value="config and project_type yaml files loaders and variables assign functions" />
+    <MESSAGE value="settings validation on set the config.yaml file" />
+    <MESSAGE value="show command added to cli" />
+    <MESSAGE value="Ref #57&#10;Create project structure from YAML template and (register with backend pending develop)" />
+    <MESSAGE value="Ref #34 View and edit global/project settings via CLI." />
+    <MESSAGE value="ignore updated" />
+    <MESSAGE value="Ref #16 Project context in YAML config. on show create" />
+    <MESSAGE value="getting project ty info added for context.yaml creation in show create" />
+    <option name="LAST_COMMIT_MESSAGE" value="getting project ty info added for context.yaml creation in show create" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
