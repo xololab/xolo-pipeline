@@ -88,7 +88,7 @@ Project initialization command
 
 Versioning system for assets and shots
 
-Maya, Nuke, and Blender integration modules
+Maya, Nuke, Gaffer and Blender integration modules
 
 Task tracking and review tools
 
