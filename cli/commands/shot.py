@@ -14,4 +14,11 @@ def create(
         "", prompt="shot id (e.g. 0010, or 0020)", show_default=False
     ),
 ):
+    """
+
+        shot command for create manually
+    :param sequence_name:
+    :param shot_id:
+    :return:
+    """
     console.print(f"[green]✔ Shot Created : {sequence_name}_{shot_id}[/green]")
