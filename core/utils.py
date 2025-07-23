@@ -2,6 +2,7 @@ import typer
 import yaml
 from pathlib import Path
 from rich.console import Console
+from rich.prompt import Prompt
 
 console = Console()
 
@@ -58,3 +59,46 @@ def get_project_type_info(project_type: str) -> dict:
         raise typer.Exit(1)
 
     return types[project_type]
+
+
+def select_project(path: Path) -> Path:
+
+    projects = []
+
+    for p in path.iterdir():
+        if p.is_dir():
+            name = p.name
+            projects.append(name)
+            # projects.append(p)
+
+
+    print("Available projects:")
+    for i, p in enumerate(projects, start=1):
+        print(f"{i}: {p}")
+    idx = int(Prompt.ask("Select project by number"))
+    return projects[idx - 1]
+
+
+
+def load_context(project_path: Path) -> dict:
+    context_file = project_path / "context.yaml"
+    with open(context_file, "r") as f:
+        return yaml.safe_load(f)
+
+
+def list_sequences(sequences_path: Path):
+    for p in sequences_path.iterdir():
+        if p.is_dir():
+            yield from list_sequences(p)
+
+
+
+def create_shot_structure(context: dict, sequence: str, shot_id: str):
+    base_path = Path(context["paths"]["sequences"]) / sequence / shot_id
+    base_path.mkdir(parents=True, exist_ok=True)
+
+    for folder in ["work", "publish"]:
+        (base_path / folder).mkdir(parents=True, exist_ok=True)
+
+    for dcc in ["maya", "nuke", "houdini", "gaffer"]:
+        (base_path / "work" / dcc).mkdir(parents=True, exist_ok=True)
