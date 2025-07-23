@@ -31,7 +31,7 @@ def create():
 
     existing_sequences = utils.list_sequences(sequences_path)
 
-    console.print(f"[bold cyan]Existing Sequences:{existing_sequences}[/bold cyan]")
+    console.print(f"[bold cyan]Existing Sequences:[/bold cyan]")
     for i, seq in enumerate(existing_sequences, start=1):
         console.print(f"{i}. {seq}")
 
@@ -41,7 +41,7 @@ def create():
         sequence_name = existing_sequences[int(choice) - 1]
     else:
         sequence_name = choice
-        (sequences_path / sequence_name).mkdir(parents=True, exist_ok=True)
+        (sequences_path / "shots" /sequence_name).mkdir(parents=True, exist_ok=True)
 
 
 
@@ -52,7 +52,7 @@ def create():
         
     """
 
-    shot_path = sequences_path / sequence_name / shot_id
+    shot_path = sequences_path / "shots" /sequence_name / shot_id
 
 
     if shot_path.exists():

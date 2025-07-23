@@ -94,7 +94,7 @@ def list_sequences(sequences_path: Path):
 
 
 def create_shot_structure(context: dict, sequence: str, shot_id: str):
-    base_path = Path(context["paths"]["sequences"]) / sequence / shot_id
+    base_path = Path(context["paths"]["sequences"])/ "shots" / sequence / shot_id
     base_path.mkdir(parents=True, exist_ok=True)
 
     for folder in ["work", "publish"]:
