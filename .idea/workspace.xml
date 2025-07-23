@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0361d9a3-f6ff-4ca7-b2de-f2efeff35d22" name="Changes" comment="getting project ty info added for context.yaml creation in show create">
-      <change afterPath="$PROJECT_DIR$/cli/commands/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cli/commands/launch.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cli/commands/shot.py" afterDir="false" />
+    <list default="true" id="88e57817-0d1a-4fe0-9460-4b01f21d05e0" name="xolo-pipeline-20 CLI option to create shots manually" comment="ref #20 xolo-pipeline-20 CLI option to create shots manually">
+      <change afterPath="$PROJECT_DIR$/.github/workflows/release.yml" afterDir="false" />
+    </list>
+    <list id="0361d9a3-f6ff-4ca7-b2de-f2efeff35d22" name="Changes" comment="getting project ty info added for context.yaml creation in show create">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cli/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/cli/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,13 +20,14 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
+        <option value="workflow" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="ronnyascencio/issue20" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -40,9 +41,27 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;git@github.com:xololab/xolo-pipeline.git&quot;,
-    &quot;accountId&quot;: &quot;1cdd6b15-2e83-4e2c-b12f-d95047ed2ec8&quot;
+    &quot;accountId&quot;: &quot;490ea580-65e8-4939-b6d3-868ba888b363&quot;
+  },
+  &quot;recentNewPullRequestHead&quot;: {
+    &quot;server&quot;: {
+      &quot;useHttp&quot;: false,
+      &quot;host&quot;: &quot;github.com&quot;,
+      &quot;port&quot;: null,
+      &quot;suffix&quot;: null
+    },
+    &quot;owner&quot;: &quot;xololab&quot;,
+    &quot;repository&quot;: &quot;xolo-pipeline&quot;
   }
 }</component>
+  <component name="JsbtTreeLayoutManager">
+    <layout place="tools.popupGrunt">
+      <scroll-view-position x="0" y="0" />
+    </layout>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
@@ -54,26 +73,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "dev",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "D:/dev/xolo-pipeline",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "tasks.timeTracking",
-    "start.from.branch": "dev",
-    "tasks.open.task.update.state.enabled": "false",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;dev&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/dev/xolo-pipeline&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;start.from.branch&quot;: &quot;origin/dev&quot;,
+    &quot;tasks.open.task.update.state.enabled&quot;: &quot;false&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/docs/assets" />
@@ -95,12 +115,12 @@
     </attachedChunks>
   </component>
   <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
+    <task id="Default" summary="Default task">
       <changelist id="0361d9a3-f6ff-4ca7-b2de-f2efeff35d22" name="Changes" comment="" />
       <created>1748879377385</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1748879377385</updated>
+      <updated>1753148530879</updated>
       <workItem from="1749941476641" duration="762000" />
       <workItem from="1750033743119" duration="2084000" />
       <workItem from="1750066326585" duration="153000" />
@@ -117,6 +137,10 @@
       <workItem from="1752406577769" duration="231000" />
       <workItem from="1752406980907" duration="3145000" />
       <workItem from="1752418475034" duration="2362000" />
+      <workItem from="1753116498236" duration="1631000" />
+      <workItem from="1753123595014" duration="2389000" />
+      <workItem from="1753145791040" duration="1793000" />
+      <workItem from="1753147694925" duration="832000" />
     </task>
     <task id="LOCAL-00001" summary="Ref #36 Create project folders based on project_type.yaml">
       <option name="closed" value="true" />
@@ -198,10 +222,32 @@
       <option name="project" value="LOCAL" />
       <updated>1752338920175</updated>
     </task>
+    <task active="true" id="xolo-pipeline-20" summary="CLI option to create shots manually">
+      <changelist id="88e57817-0d1a-4fe0-9460-4b01f21d05e0" name="xolo-pipeline-20 CLI option to create shots manually" comment="" />
+      <created>1750116539000</created>
+      <option name="issue" value="true" />
+      <url>https://github.com/xololab/xolo-pipeline/issues/20</url>
+      <option name="number" value="20" />
+      <option name="presentableId" value="xolo-pipeline-20" />
+      <option name="project" value="xolo-pipeline" />
+      <option name="type" value="BUG" />
+      <updated>1753283369093</updated>
+      <workItem from="1753148531778" duration="845000" />
+      <workItem from="1753176413108" duration="4000" />
+      <workItem from="1753178646069" duration="154000" />
+      <workItem from="1753179159066" duration="12160000" />
+      <workItem from="1753271233293" duration="1794000" />
+      <workItem from="1753279477276" duration="4401000" />
+    </task>
     <option name="localTasksCounter" value="11" />
+    <option name="createBranch" value="false" />
     <option name="shelveChanges" value="true" />
     <option name="searchClosedTasks" value="true" />
     <servers>
+      <YouTrack url="https://xololabs.youtrack.cloud">
+        <option name="shouldFormatCommitMessage" value="true" />
+        <username>admin</username>
+      </YouTrack>
       <GitHub url="https://github.com">
         <option name="repoAuthor" value="xololab" />
         <option name="repoName" value="xolo-pipeline" />
@@ -234,16 +280,20 @@
     <MESSAGE value="ignore updated" />
     <MESSAGE value="Ref #16 Project context in YAML config. on show create" />
     <MESSAGE value="getting project ty info added for context.yaml creation in show create" />
-    <option name="LAST_COMMIT_MESSAGE" value="getting project ty info added for context.yaml creation in show create" />
+    <MESSAGE value="xolo-pipeline-20 CLI option to create shots manually" />
+    <MESSAGE value="ref #20 xolo-pipeline-20 CLI option to create shots manually" />
+    <option name="LAST_COMMIT_MESSAGE" value="ref #20 xolo-pipeline-20 CLI option to create shots manually" />
+    <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/xolo/__main__.py</url>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
     </breakpoint-manager>
   </component>
 </project>
