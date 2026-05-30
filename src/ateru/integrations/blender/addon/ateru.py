@@ -29,7 +29,7 @@ def get_ateru_render_path():
         return "//render_outputs/", "untitled"
 
     file_dir, filename = os.path.split(filepath)
-    name_clean, _ = os.path.splitext(filename)  # Remueve el .blend
+    name_clean, _ = os.path.splitext(filename)  
 
     version_match = re.search(r"(v\d+)", filename, re.IGNORECASE)
     version = version_match.group(1).lower() if version_match else "v001"
@@ -78,7 +78,7 @@ def set_if_different(owner, attr_name, value):
 
 
 # =============================================================================
-# CONFIGURACIÓN GLOBAL
+# Global Configuration
 # =============================================================================
 
 
@@ -86,8 +86,7 @@ def setup_render_engine():
     scene = bpy.context.scene
     scene.render.engine = "CYCLES"
 
-    # El output global de RenderSettings no soporta multilayer; el EXR
-    # multilayer se configura en el nodo CompositorNodeOutputFile.
+   
     scene.render.image_settings.file_format = "OPEN_EXR"
     scene.render.image_settings.color_depth = "16"
     scene.render.image_settings.color_mode = "RGBA"
@@ -123,7 +122,7 @@ def setup_render_engine():
 
 
 # =============================================================================
-# ACTIVACIÓN MASIVA DE PASES (VFX READY)
+# Massiv passes activation
 # =============================================================================
 
 
@@ -202,15 +201,12 @@ def setup_view_layer(vl_name, active_col_name, all_pass_names):
 
 
 # =============================================================================
-# AUTO-WIRING EN COMPOSITOR
+# AUTO-WIRING IN COMPOSITOR
 # =============================================================================
 
 
 def add_file_slot(file_output, name, socket_type="RGBA"):
-    """
-    Blender 5 reemplazo file_slots por file_output_items. En esa API el nombre
-    del item crea el socket y la capa EXR; en 4.x se mantiene file_slots.path.
-    """
+   
     if hasattr(file_output, "file_output_items"):
         item = file_output.file_output_items.new(socket_type, name)
         item.name = name
@@ -363,7 +359,7 @@ def setup_compositing_tree(view_layer_names):
 
     bpy.context.view_layer.update()
 
-    # Retorna la ruta del directorio y el nombre limpio del archivo actual
+
     render_out_path, blend_filename = get_ateru_render_path()
     scene.render.filepath = os.path.join(
         render_out_path, "_main_render_preview", blend_filename + "."
@@ -444,7 +440,7 @@ def setup_compositing_tree(view_layer_names):
             )
 
         if is_utility_view_layer(vl_name):
-            # 1. Utility: pases técnicos y componentes.
+            # 1. Utility
             for pass_socket, (suffix, s_type) in utility_passes.items():
                 if pass_socket in rl_node.outputs:
                     slot_name = f"{vl_name}_{suffix}"
@@ -463,7 +459,7 @@ def setup_compositing_tree(view_layer_names):
                     if target_socket:
                         tree.links.new(out, target_socket)
         else:
-            # 1. Beauty: imagen final, alpha y Light Groups.
+            # 1. Beauty: final, alpha y Light Groups.
             if "Image" in rl_node.outputs:
                 slot_name = f"{vl_name}_Beauty_Denoised"
                 add_file_slot(beauty_output, slot_name, "RGBA")
@@ -513,7 +509,7 @@ def setup_compositing_tree(view_layer_names):
 
 
 # =============================================================================
-# OPERADORES Y UI
+# OPERATORS AND UI
 # =============================================================================
 
 
