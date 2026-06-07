@@ -1,6 +1,7 @@
 import typer
 from ateru.core.api import create_project, delete_project
 from ateru.core.logging import events
+from ateru.Ateru import Start
 
 app = typer.Typer(help="Create and manage projects")
 
@@ -34,3 +35,12 @@ def delete():
         delete_project(project_name)
     else:
         events.error("Aborted")
+
+
+@app.command()
+def test():
+    project = Start.Project()
+    project.create("test")
+    Start.Project.config()
+    Start.Project.delate()
+    Start.Project.delate()
